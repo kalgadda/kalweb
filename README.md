@@ -55,7 +55,7 @@ A beautiful, modern single-page portfolio website with dark/light mode support t
 
 ```bash
 # Navigate to this folder
-cd ani-portfolio-site
+cd kal-portfolio-site
 
 # Initialize git repository
 git init
