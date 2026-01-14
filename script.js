@@ -89,6 +89,24 @@ headshotImg.addEventListener('error', function() {
     console.log('Headshot failed to load');
 });
 
+// Lightning effect for smashing cards
+function createLightningEffect() {
+    const metricsGrid = document.querySelector('.metrics-grid');
+    const lightning = document.createElement('div');
+    lightning.className = 'lightning-effect';
+    metricsGrid.appendChild(lightning);
+    
+    // Remove lightning after animation
+    setTimeout(() => {
+        lightning.remove();
+    }, 600);
+}
+
+// Trigger lightning effect when cards smash
+setTimeout(() => {
+    createLightningEffect();
+}, 600); // Time when cards collide
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
