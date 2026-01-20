@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +11,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">Kal Gadda</div>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
                 <div class="nav-links">
                     <a href="#about">About</a>
                     <a href="#expertise">Expertise</a>
                     <a href="#impact">Impact</a>
                     <a href="#contact">Contact</a>
-                    <a href="resume.pdf" class="btn-resume" download>Download Resume</a>
+                    <a href="resume.pdf" class="btn-resume" download="Kal Gadda.pdf" target="_blank">Download Resume</a>
+                    <a href="https://www.linkedin.com/in/kalyanagadda/" target="_blank" class="btn-linkedin"
+                        aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                         <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.66 4.34L14.24 5.76M5.76 14.24L4.34 15.66M15.66 15.66L14.24 14.24M5.76 5.76L4.34 4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5" />
+                            <path
+                                d="M10 2V4M10 16V18M18 10H16M4 10H2M15.66 4.34L14.24 5.76M5.76 14.24L4.34 15.66M15.66 15.66L14.24 14.24M5.76 5.76L4.34 4.34"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                         <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M17.5 11.18A7.5 7.5 0 018.82 2.5 7.5 7.5 0 1017.5 11.18z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M17.5 11.18A7.5 7.5 0 018.82 2.5 7.5 7.5 0 1017.5 11.18z" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                         <svg class="system-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <rect x="2" y="3" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M6 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M9 18h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="2" y="3" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M9 18h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </button>
                 </div>
@@ -46,7 +63,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Quality Engineering, Performance & Site Reliability Engineering Consulting Leader</h1>
+                    <h1 class="hero-title">Quality Engineering, Performance & Site Reliability Engineering Consulting
+                        Leader</h1>
                     <p class="hero-subtitle">Driving resilient, scalable, and high-performance digital platforms.</p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary">Let's Talk</a>
@@ -58,9 +76,10 @@
                         <img src="headshot.jpg" alt="Professional headshot" id="headshot">
                         <div class="headshot-fallback">
                             <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                <circle cx="60" cy="60" r="60" fill="currentColor" opacity="0.1"/>
-                                <circle cx="60" cy="45" r="20" fill="currentColor" opacity="0.3"/>
-                                <path d="M30 95C30 75 42 65 60 65C78 65 90 75 90 95" fill="currentColor" opacity="0.3"/>
+                                <circle cx="60" cy="60" r="60" fill="currentColor" opacity="0.1" />
+                                <circle cx="60" cy="45" r="20" fill="currentColor" opacity="0.3" />
+                                <path d="M30 95C30 75 42 65 60 65C78 65 90 75 90 95" fill="currentColor"
+                                    opacity="0.3" />
                             </svg>
                         </div>
                     </div>
@@ -74,12 +93,12 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p class="lead">I help organizations build software that works at scale, under pressure, and in production.</p>
-                <p>As a consulting leader specializing in Quality Engineering, Performance Testing, and Site Reliability Engineering, I bridge the gap between development, operations, and business outcomes. My approach goes beyond traditional testing I focus on engineering quality into the system, ensuring applications are reliable, performant, secure, and observable from day one.</p>
-                
-                <div class="summary-box">
-                    <p>Results driven Quality Engineering and Site Reliability Engineering (SRE) consulting leader with deep expertise in test automation, performance engineering, reliability, and production excellence. I partner with engineering and leadership teams to embed quality early, improve system resilience, reduce incidents, and accelerate safe releases. Proven experience in cloud-native architectures, CI/CD, observability, and large-scale distributed systems across enterprise and high-growth environments.</p>
-                </div>
+                <p class="lead">I bridge the chaotic gap between fast development and reliable operations. I don't just
+                    test software; I engineer quality, reliability, resilience, and observability into its DNA.</p>
+                <p>As a consulting leader specializing in Quality Engineering, Performance Testing, and SRE, I help
+                    organizations build software that works at scale, under pressure, and in production. My approach
+                    goes beyond traditional testing covers the entire lifecycle ensuring applications are reliable,
+                    performant, secure, and observable from day one.</p>
 
                 <h3>I Work Closely With Teams To:</h3>
                 <div class="value-grid">
@@ -105,7 +124,8 @@
                     </div>
                 </div>
 
-                <p class="approach"><em>My consulting style is hands-on, metrics-driven, and outcome-focused, aligning technical excellence with real business value.</em></p>
+                <p class="approach"><em>My consulting style is hands-on, metrics-driven, and outcome-focused, aligning
+                        technical excellence with real business value.</em></p>
             </div>
         </div>
     </section>
@@ -140,7 +160,8 @@
                         <h3>Program Architecture</h3>
                     </div>
                     <div class="achievement-body">
-                        <p>Built comprehensive SREOps, ProdOps and SREEngg programs from the ground up, establishing foundational practices and scalable frameworks.</p>
+                        <p>Built comprehensive SREOps, ProdOps and SREEngg programs from the ground up, establishing
+                            foundational practices and scalable frameworks.</p>
                     </div>
                 </div>
             </div>
@@ -151,7 +172,7 @@
     <section id="expertise" class="section expertise-section">
         <div class="container">
             <h2 class="section-title">Core Expertise</h2>
-            
+
             <!-- Skills Marquee -->
             <div class="skills-marquee">
                 <div class="skills-marquee-content">
@@ -182,7 +203,7 @@
                     <span>Reliability Engineering</span>
                 </div>
             </div>
-            
+
             <div class="expertise-grid">
                 <!-- Quality Engineering -->
                 <div class="expertise-card">
@@ -243,22 +264,26 @@
                 <div class="use-case-card">
                     <div class="use-case-icon">🔹</div>
                     <h3>Quality Transformation</h3>
-                    <p>Helped organizations move from manual, late-stage testing to continuous quality engineering, reducing regression cycles and production defects.</p>
+                    <p>Helped organizations move from manual, late-stage testing to continuous quality engineering,
+                        reducing regression cycles and production defects.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">🔹</div>
                     <h3>Performance Readiness</h3>
-                    <p>Designed and executed end-to-end performance testing strategies to ensure applications could handle peak traffic and future growth.</p>
+                    <p>Designed and executed end-to-end performance testing strategies to ensure applications could
+                        handle peak traffic and future growth.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">🔹</div>
                     <h3>Reliability and Production Excellence</h3>
-                    <p>Implemented SRE practices, improving uptime, reducing alert noise, and cutting mean time to recovery (MTTR).</p>
+                    <p>Implemented SRE practices, improving uptime, reducing alert noise, and cutting mean time to
+                        recovery (MTTR).</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">🔹</div>
                     <h3>Leadership and Enablement</h3>
-                    <p>Advised engineering leaders on quality, reliability, and operational maturity, aligning technical KPIs with business goals.</p>
+                    <p>Advised engineering leaders on quality, reliability, and operational maturity, aligning technical
+                        KPIs with business goals.</p>
                 </div>
             </div>
         </div>
@@ -301,10 +326,21 @@
                     <li>Scale platforms without increasing operational risk.</li>
                     <li>Build confidence in every release.</li>
                 </ul>
-                <p class="contact-cta">Let's talk about how Quality Engineering, Performance Testing, and SRE can become your competitive advantage.</p>
+                <p class="contact-cta">Let's talk about how Quality Engineering, Performance Testing, and SRE can become
+                    your competitive advantage.</p>
                 <div class="contact-buttons">
                     <a href="mailto:kalchuck@gmail.com" class="btn btn-primary">Get In Touch</a>
-                    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                    <a href="https://www.linkedin.com/in/kalyanagadda/" target="_blank" class="btn btn-primary"
+                        style="background-color: #0077b5;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                            style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        Follow on LinkedIn
+                    </a>
+                    <a href="resume.pdf" class="btn btn-secondary" download="Kal Gadda.pdf" target="_blank">Download
+                        Resume</a>
                 </div>
             </div>
         </div>
@@ -336,10 +372,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Kal Gadda. Engineering quality, performance, and reliability into every release.</p>
+            <p>&copy; <span id="currentYear"></span> Kal Gadda. Engineering quality, performance, and reliability into
+                every release.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
