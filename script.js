@@ -11,7 +11,7 @@ function getPreferredTheme() {
     if (savedTheme) {
         return savedTheme;
     }
-    
+
     // Default to system
     return 'system';
 }
@@ -44,7 +44,7 @@ themeToggle.addEventListener('click', () => {
     } else {
         currentTheme = 'system';
     }
-    
+
     let newTheme;
     if (currentTheme === 'light-mode') {
         newTheme = 'system';
@@ -53,7 +53,7 @@ themeToggle.addEventListener('click', () => {
     } else {
         newTheme = 'light-mode';
     }
-    
+
     setTheme(newTheme);
 });
 
@@ -77,13 +77,13 @@ headshotImg.src = headshotImg.src; // Force reload
 headshotImg.style.display = 'block'; // Ensure it's visible
 
 // Try to load the headshot image
-headshotImg.addEventListener('load', function() {
+headshotImg.addEventListener('load', function () {
     this.classList.add('loaded');
     headshotPlaceholder.querySelector('.headshot-fallback').style.display = 'none';
     console.log('Headshot loaded successfully');
 });
 
-headshotImg.addEventListener('error', function() {
+headshotImg.addEventListener('error', function () {
     // Keep fallback visible if image fails to load
     this.style.display = 'none';
     console.log('Headshot failed to load');
@@ -95,7 +95,7 @@ function createLightningEffect() {
     const lightning = document.createElement('div');
     lightning.className = 'lightning-effect';
     metricsGrid.appendChild(lightning);
-    
+
     // Remove lightning after animation
     setTimeout(() => {
         lightning.remove();
@@ -115,7 +115,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) {
             const navHeight = document.querySelector('.navbar').offsetHeight;
             const targetPosition = target.offsetTop - navHeight - 20;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -130,13 +130,13 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.style.boxShadow = 'var(--shadow-md)';
     } else {
         navbar.style.boxShadow = 'none';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -156,9 +156,33 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Apply fade-in to sections
+// Apply fade-in to sections
 document.querySelectorAll('.section').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Optional: Animate icon
+        const isOpen = navLinks.classList.contains('active');
+        mobileMenuBtn.innerHTML = isOpen
+            ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        });
+    });
+}
